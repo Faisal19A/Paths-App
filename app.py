@@ -74,7 +74,7 @@ if src.nodata is not None:
 transform = src.transform
 
 # --- Main UI ---
-st.title("Choose Your Trai; In Alula")
+st.title("Choose Your Trail In Alula")
 st.write("Select your landmarks and starting point:")
 
 choices = st.multiselect("Choose landmarks to connect", landmarks["Landmark"].tolist())
