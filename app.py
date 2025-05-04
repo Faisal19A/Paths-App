@@ -11,7 +11,7 @@ import folium
 from streamlit_folium import st_folium
 
 # --- Page config ---
-st.set_page_config(layout="wide", page_title="Choose Your Trip In Alula")
+st.set_page_config(layout="wide", page_title="Choose Your Trail In Alula")
 BROWN = "#957E5B"
 
 # --- Sidebar: landmark info ---
@@ -74,7 +74,7 @@ if src.nodata is not None:
 transform = src.transform
 
 # --- Main UI ---
-st.title("Choose Your Trip In Alula")
+st.title("Choose Your Trai; In Alula")
 st.write("Select your landmarks and starting point:")
 
 choices = st.multiselect("Choose landmarks to connect", landmarks["Landmark"].tolist())
@@ -118,7 +118,7 @@ if len(choices) >= 2 and start:
             popup=lm
         ).add_to(m)
 
-    # draw blue path segments
+    # draw Brown path segments
     lines = []
     for a,b in zip(seq[:-1], seq[1:]):
         path,_ = route_through_array(cost_arr, inds[a], inds[b], fully_connected=True)
@@ -130,7 +130,7 @@ if len(choices) >= 2 and start:
         folium.PolyLine(
             # swap x,y → lat,lon
             locations=[(y, x) for x,y in geom.coords],
-            color="blue", weight=4
+            color="#957E5B", weight=4
         ).add_to(m)
 
     # fit map
