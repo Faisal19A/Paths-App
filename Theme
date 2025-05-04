@@ -1,4 +1,4 @@
-.streamlit/config.toml
+main/Theme
 
 [theme]
 primaryColor = "#C3A283"
