@@ -1,0 +1,10 @@
+streamlit
+geopandas
+rasterio
+numpy
+pandas
+scikit-image
+shapely
+folium
+fiona
+pyproj
