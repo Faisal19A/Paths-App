@@ -153,6 +153,15 @@ if len(choices) >= 2 and start:
     })
     st.subheader("Route Metrics")
     st.table(df)
+    st.markdown(
+    """
+    <hr>
+    <p style="text-align: center; font-size:12px; color: #888;">
+      © 2025 Faisal Alolayani
+    </p>
+    """,
+    unsafe_allow_html=True
+)
 
 else:
     st.info("Please pick at least two landmarks **and** a starting landmark.")
